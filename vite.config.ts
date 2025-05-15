@@ -12,10 +12,11 @@ export default defineConfig({
       registerType: "autoUpdate",
       devOptions: { enabled: true },
       manifest: {
+        id: "/grocery-list-pwa/",
         name: "Grocery List PWA",
         short_name: "GLP",
         description: "Simple Grocery List that can work offline",
-        theme_color: "#ffffff",
+        theme_color: "#00bcff",
         icons: [
           {
             src: "pwa-64x64.png",

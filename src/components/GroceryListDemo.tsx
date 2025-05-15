@@ -71,15 +71,18 @@ const GroceryListDemo = () => {
 
   return (
     <div className="max-w mx-auto bg-gray-100 h-full">
-      <div className="bg-green-600 text-white p-4">
+      <div className="bg-sky-400 text-white p-4">
         <div className="flex justify-between items-center">
           <h1 className="text-xl font-bold">Grocery List</h1>
           <div className="flex gap-2">
             <button
-              onClick={() => setIsModalOpen(true)}
-              className="bg-green-700 px-3 py-1 rounded text-sm"
+              onClick={() => {
+                setEditItem(null);
+                setIsModalOpen(true);
+              }}
+              className="fixed bottom-5 right-5 bg-sky-400 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:bg-blue-600 hover:translate-y-1 transition-all"
             >
-              Add Item
+              +
             </button>
           </div>
         </div>

@@ -124,7 +124,7 @@ export const ItemModal: React.FC<ItemModalProps> = ({
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-green-600 text-white rounded-md text-sm"
+              className="px-4 py-2 bg-sky-400 text-white rounded-md text-sm"
             >
               Save
             </button>
