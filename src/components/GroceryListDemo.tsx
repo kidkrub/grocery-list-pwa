@@ -9,6 +9,7 @@ import {
   getAllFromStore,
   putItem,
 } from "../utilities/idb";
+import InstallPWA from "./InstallPWA";
 
 const GroceryListDemo = () => {
   const [groceries, setGroceries] = useState<GroceryItem[]>([]);
@@ -107,14 +108,14 @@ const GroceryListDemo = () => {
         <p>Tap on an item to mark as bought</p>
       </div>
       <button
-              onClick={() => {
-                setEditItem(null);
-                setIsModalOpen(true);
-              }}
-              className="fixed bottom-5 right-5 bg-sky-400 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:bg-blue-600 hover:translate-y-1 transition-all"
-            >
-              +
-            </button>
+        onClick={() => {
+          setEditItem(null);
+          setIsModalOpen(true);
+        }}
+        className="fixed bottom-5 right-5 bg-sky-400 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:bg-blue-600 hover:translate-y-1 transition-all"
+      >
+        +
+      </button>
       {isModalOpen && (
         <ItemModal
           item={editItem}
@@ -122,6 +123,7 @@ const GroceryListDemo = () => {
           onSave={handleSaveItem}
         />
       )}
+      <InstallPWA />
     </div>
   );
 };
